@@ -13,10 +13,8 @@ class StudentsController < ApplicationController
 
   def create
     student = Student.new
-  student.first_name = params[:]
-  post.description = params[:description]
-  post.save
-end
+    student.first_name = params[:first_name]
+    student.last_name = params[:last_name]
+    student.save
   end
-
 end
