@@ -12,6 +12,11 @@ class StudentsController < ApplicationController
   end
 
   def create
+    student = Student.new
+  student.first_name = params[:]
+  post.description = params[:description]
+  post.save
+end
   end
 
 end
